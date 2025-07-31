@@ -40,6 +40,9 @@ internal class Program
             CorPelo = "Branco"
         };
 
+        Gato gato2 = new Gato("Luna", 4, "Gato", "Persa", "Cinza");
+
+
         Console.WriteLine($"Gato: {gato.Nome}, Idade: {gato.Idade}, Espécie: {gato.Especie}, Raça: {gato.Raca}, Cor do Pelo: {gato.CorPelo}");
         gato.FazerSom(); // Chamando o método FazerSom do gato
     }
