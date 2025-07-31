@@ -22,7 +22,13 @@ internal class Program
 
         Console.WriteLine($"Animal: {cachorro.Nome}, Idade: {cachorro.Idade}, Espécie: {cachorro.Especie}");
 
-        Console.WriteLine($"Cachorro: {cachorro2.Nome}, Idade: {cachorro2.Idade}, Espécie: {cachorro2.Especie}, Raça: {cachorro2.Raca}, Tipo de Alimentação: {cachorro2.TipoAlimentacao}");
+        //Console.WriteLine($"Cachorro: {cachorro2.Nome}, Idade: {cachorro2.Idade}, Espécie: {cachorro2.Especie}, Raça: {cachorro2.Raca}, Tipo de Alimentação: {cachorro2.TipoAlimentacao}");
+
+        cachorro2.ExibirInformacoes();
+        cachorro2.Idade = 3; // Alterando a idade do cachorro
+        cachorro2.ExibirInformacoes(); // Exibindo as informações atualizadas
+
+        cachorro2.FazerSom(); // Chamando o método FazerSom do cachorro
 
 
         Gato gato = new Gato
@@ -35,5 +41,6 @@ internal class Program
         };
 
         Console.WriteLine($"Gato: {gato.Nome}, Idade: {gato.Idade}, Espécie: {gato.Especie}, Raça: {gato.Raca}, Cor do Pelo: {gato.CorPelo}");
+        gato.FazerSom(); // Chamando o método FazerSom do gato
     }
 }

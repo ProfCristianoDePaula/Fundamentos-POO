@@ -11,5 +11,9 @@ namespace POO_Aula_01
         public string? Raca { get; set; }
         public string? CorPelo { get; set; }
 
+        public override void FazerSom()
+        {
+            Console.WriteLine($"{Nome} está miando.");
+        }
     }
 }
