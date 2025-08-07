@@ -1,6 +1,9 @@
 ﻿using Lista_Exercicios.Exercicio_02;
 using Lista_Exercicios.Exercicio_03;
 using Lista_Exercicios.Exercicio01;
+using Lista_Exercicios.Exercicio04;
+using Lista_Exercicios.Exercicio05;
+using Lista_Exercicios.Exercicio06;
 
 internal class Program
 {
@@ -84,5 +87,61 @@ internal class Program
 
         Console.WriteLine("\n===========================================================================");
 
+        Console.WriteLine("\nExercício 04");
+
+        Carro carro1 = new Carro("Jeep", "Renegade", 70);
+        Console.WriteLine($"1. Velocidade Atual: {carro1.Velocidade}");
+        carro1.Acelerar();
+        Console.WriteLine($"1. Velocidade Atual: {carro1.Velocidade}");
+        carro1.Desacelerar();
+        carro1.Desacelerar();
+        carro1.Desacelerar();
+        Console.WriteLine($"1. Velocidade Atual: {carro1.Velocidade}");
+
+        Carro carro2 = new Carro("Fiat", "Uno", 50);
+        Console.WriteLine($"\n2. Velocidade Atual: {carro2.Velocidade}");
+        carro2.Acelerar();
+        carro2.Acelerar();
+        carro2.Acelerar();
+        Console.WriteLine($"2. Velocidade Atual: {carro2.Velocidade}");
+        carro2.Desacelerar();
+        Console.WriteLine($"2. Velocidade Atual: {carro2.Velocidade}");
+
+        Carro carro3 = new Carro("Volkswagen", "Gol", 60);
+        Console.WriteLine($"\n3. Velocidade Atual: {carro3.Velocidade}");
+        carro3.Acelerar();
+        carro3.Acelerar();
+        Console.WriteLine($"3. Velocidade Atual: {carro3.Velocidade}");
+        carro3.Desacelerar();
+        carro3.Desacelerar();
+        Console.WriteLine($"3. Velocidade Atual: {carro3.Velocidade}");
+
+
+        Console.WriteLine("\n===========================================================================");
+
+        Console.WriteLine("\nExercício 05");
+
+        Funcionario funcionario1 = new Funcionario("Ana", 30, "Professora");
+        funcionario1.Envelhecer(5); // Envelhece 5 anos
+
+        Funcionario funcionario2 = new Funcionario("Bruno", 25, "Engenheiro");
+        funcionario2.Envelhecer(3); // Envelhece 3 anos
+
+        Funcionario funcionario3 = new Funcionario("Carla", 28, "Médica");
+        funcionario3.Envelhecer(2); // Envelhece 2 anos
+
+
+        Console.WriteLine("\n===========================================================================");
+
+        Console.WriteLine("\nExercício 06");
+
+        Gato gato = new Gato("Gato", "Mingau");
+        gato.EmitirSom();
+
+        Galinha galinha = new Galinha("Galinha", "Clara");
+        galinha.EmitirSom();
+
+        Porco porco = new Porco("Porco", "Porky");
+        porco.EmitirSom();
     }
 }
