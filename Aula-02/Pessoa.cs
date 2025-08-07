@@ -15,7 +15,7 @@ namespace Aula_02
         public DateOnly? DataNascimento { get; set; }
 
         // Metodos da classe Pessoa
-        public void Apresentar()
+        public virtual void Apresentar()  // Método virtual para permitir sobrecarga em classes filhas
         {
             Console.WriteLine($"Olá, meu nome é {Nome}, meu CPF é {CPF} e eu nasci em {DataNascimento}.");
         }
