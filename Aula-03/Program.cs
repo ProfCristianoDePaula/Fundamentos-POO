@@ -193,8 +193,77 @@ internal class Program
             Console.WriteLine("\nNome Encontrado");
         else
             Console.WriteLine("\nO Nome não está na lista");
+
+
+        Console.WriteLine("\n******************************* Trabalhando com Pilhas *******************************");
+
+        // Criar uma Pilha de elementos (Stack => Pilha)
+        Stack<string> pilha = new Stack<string>();
+
+        // Adicionar itens em uma pilha
+        pilha.Push("Harry Potter");
+        pilha.Push("Cosmos");
+        pilha.Push("Morro dos Ventos Uivantes");
+
+        // Imprimir elementos da pilha
+        foreach (var livro in pilha)
+        {
+            Console.WriteLine(livro);
+        }
+
+        // Remover o primeiro item da pilha
+        string livroRetirado = pilha.Pop();
+        Console.WriteLine($"\nO livro retirado da pilha de livros foi: {livroRetirado}\n");
+
+        // Imprimir elementos da pilha
+        foreach (var livro in pilha)
+        {
+            Console.WriteLine(livro);
+        }
+
+        // Pesquisar um item dentro da pilha
+        if (pilha.Contains("Cosmos"))
+            Console.WriteLine("O Livro foi encontrado");
+        else
+            Console.WriteLine("O Livro nao está na lista");
+
+
+        Console.WriteLine("\n******************************* Trabalhando com HashSet *******************************");
+
+        // HashSet é uma lista que nao permite itens repetidos
+
+        // Criar um HashSet
+        HashSet<string> listaUnica = new HashSet<string>();
+
+        // Adicionar itens no HashSet
+        listaUnica.Add("Manga");
+        listaUnica.Add("Goiaba");
+        listaUnica.Add("Maça");
+        listaUnica.Add("Melancia");
+
+        // Inclusão de um item repetido (sem efeito)
+        listaUnica.Add("Goiaba");
+
+        // Imprime a lista unica
+        foreach (var unica in listaUnica)
+        {
+            Console.WriteLine(unica);
+        }
+        Console.WriteLine(); // "Escreve" uma Linha em branco
+
+        // Remover um item da lista Unica
+        listaUnica.Remove("Goiaba");
+        foreach (var unica in listaUnica)
+        {
+            Console.WriteLine(unica);
+        }
+
+        // Procurar um elementos na HashSet
+        bool temManga = listaUnica.Contains("Manga");
+
+        if (temManga)
+            Console.WriteLine("\nSim, temos manga");
+        else
+            Console.WriteLine("\nNão, não temos manga.");
     }
-
-
-
 }
