@@ -209,8 +209,10 @@ internal class Program
         Forma forma1 = new Retangulo(5, 3);
         Forma forma2 = new Circulo(4);
 
+        var areaRetangulo = forma1.CalcularArea();
+
         // Aplicando polimorfismo
-        Console.WriteLine($"Área do Retângulo: {forma1.CalcularArea()}");
+        Console.WriteLine($"Área do Retângulo: {areaRetangulo}");
         Console.WriteLine($"Área do Círculo: {forma2.CalcularArea():F2}");
     }
 }

@@ -29,7 +29,7 @@ namespace Lista_Exercicios.Exercicio09
 
         public void ExibirStatus()
         {
-            Console.WriteLine($"Nome: {this.Nome}, Categoria: {this.Categoria}, Nivel: {this.Nivel}, Força; {this.Forca}, Inteligencia: {this.Inteligencia}, Vida: {this.Vida}");
+            Console.WriteLine($"Nome: {this.Nome}, Categoria: {this.Categoria}, Nivel: {this.Nivel}, Força: {this.Forca}, Inteligencia: {this.Inteligencia}, Vida: {this.Vida}");
         }
     }
 }
