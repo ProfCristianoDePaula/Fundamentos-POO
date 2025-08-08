@@ -82,5 +82,72 @@ internal class Program
             Console.WriteLine($"Código: {aluno.Codigo}, Nome: {aluno.Nome}");
         }
 
+        //Remover um aluno específico por nome
+        listaAlunos.RemoveAll(a => a.Nome == "Bia");
+        Console.WriteLine("\nImprimindo os valores do 'List' de Alunos na tela");
+        foreach (Aluno aluno in listaAlunos) // Percorre toda a lista
+        {
+            // Imprimir item por item da lista
+            Console.WriteLine($"Código: {aluno.Codigo}, Nome: {aluno.Nome}");
+        }
+
+
+        Console.WriteLine("\n******************************* Trabalhando com Dicionário de Dados *******************************");
+
+        // Criando um dicionário de dados
+        Dictionary<int, string> dicionario = new Dictionary<int, string>();
+
+        // Adicionando itens ao dicionário
+        dicionario.Add(10, "Ka");
+        dicionario.Add(20, "Fusca");
+        dicionario.Add(30, "Civic");
+        dicionario.Add(40, "Corolla");
+
+        Console.WriteLine("\nImprimindo os valores do 'Dictionary' na tela com KeyValuePair()");
+        foreach (KeyValuePair<int, string> item in dicionario)
+        {
+            // Imprimir chave e valor do dicionário
+            Console.WriteLine($"Chave: {item.Key}, Valor: {item.Value}");
+        }
+
+        Console.WriteLine("\nImprimindo os valores do 'Dictionary' na tela com var");
+        foreach (var item in dicionario)
+        {
+            // Imprimir chave e valor do dicionário
+            Console.WriteLine($"Chave: {item.Key}, Valor: {item.Value}");
+        }
+
+        // Alterar valor de um item no dicionário
+        Console.WriteLine("\nAlterando os valores do 'Dictionary'");
+        dicionario[10] = "Corsa";
+        foreach (var item in dicionario)
+        {
+            // Imprimir chave e valor do dicionário
+            Console.WriteLine($"Chave: {item.Key}, Valor: {item.Value}");
+        }
+
+        // Pesquisando um item no dicionário por valor
+        Console.WriteLine("\nPesquisando um item no dicionário por chave");
+        string carro;
+
+        bool carroExiste = dicionario.TryGetValue(30, out carro);
+
+        if (carroExiste)
+        {
+            Console.WriteLine($"O valor encontrado para a chave 30 é: {carro}");
+        }
+        else
+        {
+            Console.WriteLine("A chave 30 não foi encontrada");
+        }
+
+        // Excluindo um item por Chave
+        dicionario.Remove(30);
+        foreach (var item in dicionario)
+        {
+            // Imprimir chave e valor do dicionário
+            Console.WriteLine($"Chave: {item.Key}, Valor: {item.Value}");
+        }
+
     }
 }
