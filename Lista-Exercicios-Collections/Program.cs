@@ -69,6 +69,7 @@
         fila.Enqueue("Diana");
         fila.Enqueue("Eduardo");
 
+        // Mostrando o próximo da fila sem removê-lo
         Console.WriteLine($"\nPróximo da fila: {fila.Peek()}");
 
         string atendido = fila.Dequeue();
@@ -97,6 +98,7 @@
         historico.Push("www.microsoft.com");
         historico.Push("www.reddit.com");
 
+        // Mostrando o próximo da pilha sem removê-lo
         Console.WriteLine($"\nPágina atual: {historico.Peek()}");
 
         string paginaAnterior = historico.Pop();
