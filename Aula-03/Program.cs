@@ -149,5 +149,52 @@ internal class Program
             Console.WriteLine($"Chave: {item.Key}, Valor: {item.Value}");
         }
 
+
+        Console.WriteLine("\n******************************* Trabalhando com Fila *******************************");
+
+        // Criar uma coleção de dados do tipo fila (Queue => Fila)
+        Queue<string> fila = new Queue<string>();
+
+        // Adicionar elementos da fila
+        fila.Enqueue("Kaique");
+        fila.Enqueue("Leo");
+        fila.Enqueue("Gabi");
+
+        foreach (var pessoa in fila)
+        {
+            // Imprimir chave e valor do dicionário
+            Console.WriteLine(pessoa);
+        }
+
+
+        // Tirar os elementos da fila
+        string primeiroFila = fila.Dequeue();
+        Console.WriteLine($"\n{primeiroFila} é o primeiro,e saiu da fila\n");
+        foreach (var pessoa in fila)
+        {
+            // Imprimir chave e valor do dicionário
+            Console.WriteLine(pessoa);
+        }
+
+        // Todo novo item é inserido no final da fila
+        fila.Enqueue("Victhor");
+        Console.WriteLine("\n");
+
+        foreach (var pessoa in fila)
+        {
+            // Imprimir chave e valor do dicionário
+            Console.WriteLine(pessoa);
+        }
+
+        // Procurar por um elemento na fila
+        bool achou = fila.Contains("Leo");
+
+        if (achou)
+            Console.WriteLine("\nNome Encontrado");
+        else
+            Console.WriteLine("\nO Nome não está na lista");
     }
+
+
+
 }
