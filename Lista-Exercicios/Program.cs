@@ -1,9 +1,14 @@
-﻿using Lista_Exercicios.Exercicio_02;
-using Lista_Exercicios.Exercicio_03;
+﻿using Lista_Exercicios.Exercicio02;
+using Lista_Exercicios.Exercicio03;
 using Lista_Exercicios.Exercicio01;
 using Lista_Exercicios.Exercicio04;
 using Lista_Exercicios.Exercicio05;
 using Lista_Exercicios.Exercicio06;
+using Lista_Exercicios.Exercicio07;
+using Lista_Exercicios.Exercicio08;
+using Lista_Exercicios.Exercicio09;
+using Lista_Exercicios.Exercicio11;
+using Lista_Exercicios.Exercicio10;
 
 internal class Program
 {
@@ -143,5 +148,69 @@ internal class Program
 
         Porco porco = new Porco("Porco", "Porky");
         porco.EmitirSom();
+
+
+        Console.WriteLine("\n===========================================================================");
+
+        Console.WriteLine("\nExercício 07");
+
+        ContaCorrente conta1 = new ContaCorrente("Banco do Brasil", 1234, 56789, 1000.00, 1000);
+        conta1.ExibirSaldo();
+        conta1.Depositar(500.00);
+        conta1.Sacar(200.00);
+        conta1.ExibirSaldo();
+
+        ContaCorrente conta2 = new ContaCorrente("Caixa Econômica", 4321, 98765, 2000.00, 2000);
+        conta2.ExibirSaldo();
+        conta2.Depositar(1000.00);
+        conta2.Sacar(300.00);
+        conta2.ExibirSaldo();
+
+        ContaCorrente conta3 = new ContaCorrente("Santander", 5678, 12345, 1500.00, 750);
+        conta3.ExibirSaldo();
+        conta3.Depositar(700.00);
+        conta3.Sacar(400.00);
+        conta3.ExibirSaldo();
+
+
+        Console.WriteLine("\n===========================================================================");
+        Console.WriteLine("\nExercício 08");
+
+        ContaGenerica2 contaGenerica1 = new ContaGenerica2("Banco do Brasil", 1234, 56789, 1000.00);
+        contaGenerica1.ExibirSaldo();
+        contaGenerica1.Depositar(500.00);
+        contaGenerica1.Sacar(200.00);
+
+        Console.WriteLine("\n===========================================================================");
+        Console.WriteLine("\nExercício 09");
+
+        Personagem personagem1 = new Personagem("Merlin", "Mago", 10, 25, 85, 100, 100);
+        Personagem personagem2 = new Personagem("Arthur", "Guerreiro", 12, 90, 75, 70, 80);
+        Personagem personagem3 = new Personagem("Lancelot", "Cavaleiro", 11, 100, 68, 35, 90);
+
+        personagem1.ExibirStatus();
+        personagem2.ExibirStatus();
+        personagem3.ExibirStatus();
+
+        Console.WriteLine("\n===========================================================================");
+        Console.WriteLine("\nExercício 10");
+
+        Animal10 galinha10 = new Galinha10("Galinha", "Clara");
+        Animal10 porco10 = new Porco10("Porco", "Porky");
+        Animal10 gato10 = new Gato10("Cachorro", "Rex");
+        galinha10.EmitirSom();
+        porco10.EmitirSom();
+        gato10.EmitirSom();
+
+
+        Console.WriteLine("\n===========================================================================");
+        Console.WriteLine("\nExercício 11");
+
+        Forma forma1 = new Retangulo(5, 3);
+        Forma forma2 = new Circulo(4);
+
+        // Aplicando polimorfismo
+        Console.WriteLine($"Área do Retângulo: {forma1.CalcularArea()}");
+        Console.WriteLine($"Área do Círculo: {forma2.CalcularArea():F2}");
     }
 }

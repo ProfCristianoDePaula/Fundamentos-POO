@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Lista_Exercicios.Exercicio_03
+namespace Lista_Exercicios.Exercicio03
 {
     public class Produto
     {

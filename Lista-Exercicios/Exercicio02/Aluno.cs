@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Lista_Exercicios.Exercicio_02
+namespace Lista_Exercicios.Exercicio02
 {
     public class Aluno
     {
