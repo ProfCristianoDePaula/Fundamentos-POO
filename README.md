@@ -31,4 +31,4 @@ Este repositório contém exemplos, exercícios e projetos desenvolvidos durante
 
 ## 👨‍🏫 Autor
 
-Material desenvolvido pelo **Prof. Eng. Cristiano de Paula** para fins didáticos em aulas de Programação Orientada a
+Material desenvolvido pelo **Prof. Eng. Cristiano de Paula** para fins didáticos em aulas de Programação Orientada a Objetos.
